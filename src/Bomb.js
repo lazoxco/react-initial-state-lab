@@ -2,7 +2,20 @@ import React, { Component } from 'react';
 
 export default class Bomb extends Component {
 
+  constructor(props) {
+    super()
+    this.state = {
+      secondsLeft: props.initialCount
+    }
+  }
+
   render() {
-    return <h1>Hello from Bomb</h1>
+  // return <div>{this.state.secondsLeft} seconds left before I go boom!</div>
+
+    return (
+      <div>
+        {(this.state.secondsLeft === 0) ? <div>Boom!</div> : <div>{this.state.secondsLeft} seconds left before I go boom!</div>}
+      </div>
+    )
   }
 }
