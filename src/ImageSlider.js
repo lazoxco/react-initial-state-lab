@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
-class ImageSlider extends React.Component {
-
+export default class ImageSlider extends Component {
+  render() {
+    return <h1>Hello from ImageSlider</h1>
+  }
 }
